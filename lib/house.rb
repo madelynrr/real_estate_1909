@@ -12,4 +12,9 @@ class House
   def add_room(room)
     @rooms << room
   end
+
+  def rooms_from_category(category)
+    @rooms.select |room|
+    category == room.category
+  end
 end
