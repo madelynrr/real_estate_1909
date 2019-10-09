@@ -14,7 +14,14 @@ class House
   end
 
   def rooms_from_category(category)
-    @rooms.select |room|
-    category == room.category
+    @rooms.find_all { |room| category == room.category}
+  end
+
+  def area
+    total_area = 0
+    @rooms.each do |room|
+      total_area += room.area
+    end
+    total_area
   end
 end
