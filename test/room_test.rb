@@ -9,7 +9,11 @@ class RoomTest < Minitest::Test
   end
 
   def test_it_exists
-    assert_equal Room, @room
+    assert_instance_of Room, @room
+  end
+
+  def test_area
+    assert_equal 130, @room.area
   end
 
 end
