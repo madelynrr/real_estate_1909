@@ -1,9 +1,8 @@
 class House
 
-  attr_reader :price, :address, :rooms
+  attr_reader :address, :rooms
 
   def initialize(price, address)
-    # String to integer
     @price = price
     @address = address
     @rooms = []
@@ -11,6 +10,10 @@ class House
 
   def add_room(room)
     @rooms << room
+  end
+
+  def price
+    @price.split('$')[1].to_i
   end
 
   def rooms_from_category(category)

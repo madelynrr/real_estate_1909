@@ -21,6 +21,10 @@ class HouseTest < Minitest::Test
       assert_equal [], @house.rooms
     end
 
+    def test_price
+      assert_equal 400000, @house.price
+    end
+
     def test_add_room
       @house.add_room(@room_1)
       @house.add_room(@room_2)
